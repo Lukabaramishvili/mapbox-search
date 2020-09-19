@@ -1,0 +1,7 @@
+div.toggleMode {
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    background-color: white;
+    z-index: 1;
+}
