@@ -13,15 +13,19 @@ const ToggleMode = ({style, setStyle}) => {
         setStyle(url)
     }
 
-    const buttons = styles.map(style => {
-        return <button onClick={() => setStyleMode(style.url)} key={style.name}>{style.name}</button>
+    const buttons = styles.map((s, index) => {
+        let className= '';
+
+        if (s.url === style) {
+            className='selected';
+        }
+        return <button className={className} onClick={() => setStyleMode(s.url)} key={index}>{s.name}</button>
     })
     return (
         <div className='toggleMode'>
             {buttons}
-            {style}
         </div>
     )
 }
 
-export default ToggleMode
+export default ToggleMode;
